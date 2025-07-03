@@ -1,7 +1,17 @@
 
+
   import UserExperience from "./UserExperience";
 
-const avisUtilisateurs = [
+
+import './App.css'
+import FooterComponent from './component/footer.jsx'
+import HeaderComponent from './component/header.jsx'
+
+
+
+
+export default function App() {
+  const avisUtilisateurs = [
   {
     id: 1,
     nom: "Fatima",
@@ -56,12 +66,11 @@ function Avis({ avis }) {
       <p style={{ fontStyle: "italic" }}>{avis.commentaire}</p>
     </div>
   );
-}
 
-export default function App() {
   return (
     <div>
-      <UserExperience/>
+       <HeaderComponent/>
+      <FooterComponent/>
     </div>
   );
 }
