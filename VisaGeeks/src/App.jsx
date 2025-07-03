@@ -1,14 +1,19 @@
-import Navbar from "./component/navbar"
-import "./App.css"
-import AboutUs from "./component/aboutUs"
+
+
+import './App.css'
+import FooterComponent from './component/footer.jsx'
+import HeaderComponent from './component/header.jsx'
+
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50">
-      <Navbar />
-      
-      <AboutUs/>
-    </div>
+
+
+    <>
+      <HeaderComponent/>
+      <FooterComponent/>
+    </>
+
   )
 }
 
