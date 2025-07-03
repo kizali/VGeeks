@@ -1,35 +1,69 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+  import UserExperience from "./UserExperience";
 
-  return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+const avisUtilisateurs = [
+  {
+    id: 1,
+    nom: "Fatima",
+    note: 5,
+    commentaire: "Le service est super facile à utiliser, j'ai eu mon visa rapidement !",
+  },
+  {
+    id: 2,
+    nom: "Mohamed",
+    note: 4,
+    commentaire: "Bonne expérience, juste un peu lent au niveau du traitement.",
+  },
+  {
+    id: 3,
+    nom: "Sara",
+    note: 5,
+    commentaire: "Très clair, j'ai bien aimé le suivi de ma demande en ligne.",
+  },
+];
+
+
+function Etoiles({ note }) {
+  const etoiles = [];
+  for (let i = 1; i <= 5; i++) {
+    etoiles.push(
+      <span
+        key={i}
+        style={{ color: i <= note ? "#FFD700" : "#CCC", fontSize: "20px" }}
+      >
+        ★
+      </span>
+    );
+  }
+  return <div>{etoiles}</div>;
 }
 
-export default App
+
+function Avis({ avis }) {
+  return (
+    <div
+      style={{
+        border: "1px solid #ddd",
+        borderRadius: "8px",
+        padding: "15px",
+        marginBottom: "15px",
+        backgroundColor: "#f9f9f9",
+        boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+      }}
+    >
+      <h3>{avis.nom}</h3>
+      <Etoiles note={avis.note} />
+      <p style={{ fontStyle: "italic" }}>{avis.commentaire}</p>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <UserExperience/>
+    </div>
+  );
+}
+
+
