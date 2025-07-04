@@ -18,7 +18,6 @@ const Formulaire = () => {
     adresse_etranger: "",
     financeur: "",
     visa_passe: "",
-    details_visa: "",
   });
 
   const handleChange = (e) => {
@@ -334,20 +333,7 @@ const Formulaire = () => {
               </select>
             </div>
 
-            {formData.visa_passe === "oui" && (
-              <div className="md:col-span-2">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
-                  Détails des visas précédents
-                </label>
-                <textarea
-                  name="details_visa"
-                  value={formData.details_visa}
-                  onChange={handleChange}
-                  rows={3}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg"
-                ></textarea>
-              </div>
-            )}
+          
           </div>
         </div>
 

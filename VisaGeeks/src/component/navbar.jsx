@@ -1,12 +1,11 @@
-"use client"
 
 import { useState } from "react"
-
+import React from "react"
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <header className="bg-gray-200 shadow-sm">
+    <header  className="bg-gradient-to-r from-blue-900 to-blue-600 fixed w-full shadow-lg px-2 py-2 flex items-center z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <div className="flex items-center">
@@ -20,22 +19,22 @@ export default function Navbar() {
         <nav className="hidden md:block">
           <ul className="flex space-x-8">
             <li>
-              <a href="#" className="text-blue-600 font-medium hover:text-blue-700 transition-colors">
+              <a href="#" className="text-white font-medium hover:text-black transition-colors">
                 Home
               </a>
             </li>
             <li>
-              <a href="#visa-form" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="#visa-form" className="text-white hovwhiteblue-600 hover:text-black transition-colors">
                 Demande Visa
               </a>
             </li>
             <li>
-              <a href="#about" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="#about" className="text-white hovwhiteblue-600 hover:text-black transition-colors">
                 About Us
               </a>
             </li>
             <li>
-              <a href="#contact" className="text-gray-600 hover:text-blue-600 transition-colors">
+              <a href="#contact" className="text-white hovwhiteblue-600 hover:text-black transition-colors">
                 Contact
               </a>
             </li>

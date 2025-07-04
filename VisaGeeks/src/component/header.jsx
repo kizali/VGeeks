@@ -1,13 +1,11 @@
-import visaImage from "../assets/visa.jpeg"; // ✅ Correct way to import image
 import React from "react";
+import visaImage from "../assets/visa.jpeg"; 
+import Navbar from "./navbar";
+
 const HeaderComponent = () => {
   return (
     <>
-      <header className="bg-gradient-to-r from-blue-900 to-blue-600 fixed w-full shadow-lg px-6 py-4 flex items-center z-10">
-        <img src={visaImage} alt="VisaGeeks Logo" className="h-12 w-12 rounded-full mr-4 shadow-md" />
-        <span className="text-white text-2xl font-bold tracking-wide">VisaGeeks</span>
-      </header>
-
+      <Navbar/>
       <main className=" pt-20 bg-white min-h-screen">
         <div className="mx-auto flex flex-col md:flex-row items-center gap-12 px-6 py-12">
           <div className="flex flex-col justify-content-between items-start ">
