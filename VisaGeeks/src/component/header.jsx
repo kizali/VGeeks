@@ -1,7 +1,7 @@
 import React from "react";
 import visaImage from "../assets/visa.jpeg"; 
 import Navbar from "./navbar";
-
+import { Link } from "react-router-dom";
 const HeaderComponent = () => {
   return (
     <>
@@ -19,9 +19,9 @@ const HeaderComponent = () => {
             <p className="mt-4 text-lg text-gray-700">
               Our platform is designed to simplify the visa application process and provide you with the information you need to make informed decisions.
             </p>
-            <button className="mt-8 px-8 py-3 bg-blue-700 text-white rounded-full font-semibold shadow hover:bg-blue-800 transition duration-300">
-              Request Demande Visa
-            </button>
+            <Link to="/formulaire" className="mt-6 bg-blue-600 text-white px-6 py-3 rounded-full shadow-lg hover:bg-blue-700 transition duration-300">
+              Get Started
+            </Link>
           </div>
           <div className="w-[900px] justify-center">
             <div className="relative">

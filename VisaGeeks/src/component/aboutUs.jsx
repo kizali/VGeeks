@@ -27,8 +27,8 @@ const AboutUs = () => {
 
   return (
     <>
-      <div className="bg-white p-8">
-        <h1 className="text-3xl text-center font-bold  mb-4">About Us</h1>
+      <div className="bg-white ">
+        <h1 className="text-4xl text-center font-bold  mb-4">About Us</h1>
         <div className="max-w-7xl  mx-auto px-4 py-10 grid gap-8 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
           {visaData.map(({ type, description, image }, index) => (
             <div
