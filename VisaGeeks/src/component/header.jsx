@@ -1,6 +1,5 @@
-import React from "react";
 import visaImage from "../assets/visa.jpeg"; // ✅ Correct way to import image
-
+import React from "react";
 const HeaderComponent = () => {
   return (
     <>
