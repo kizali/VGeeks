@@ -1,17 +1,18 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import Formulaire from './formulaire'
-import React from "react";
+
+import AboutUs from './component/aboutUs.jsx'
+import FooterComponent from './component/footer.jsx'
+import HeaderComponent from './component/header.jsx'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-        <Formulaire/>
-    </div>
+
+    <>
+      <HeaderComponent/>
+      <AboutUs/>
+      <FooterComponent/>
+    </>
   )
 }
 
